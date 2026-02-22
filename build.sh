@@ -18,14 +18,9 @@ source "$ROOT/.venv/bin/activate"
 OUTDIR="$ROOT/output"
 mkdir -p "$OUTDIR"
 
-echo "Copying python sources from src/ to dist/"
-mkdir -p "$ROOT/dist"
-cp -v "$ROOT/src"/*.py "$ROOT/dist/" || true
-
 # Copy manifest and SKILL.md from src if present
-if [ -f "$ROOT/src/manifest.json" ]; then
-  cp -v "$ROOT/src/manifest.json" "$ROOT/dist/"
-fi
+echo "Copying SKILL.md from src/ to dist/"
+mkdir -p "$ROOT/dist"
 if [ -f "$ROOT/src/SKILL.md" ]; then
   cp -v "$ROOT/src/SKILL.md" "$ROOT/dist/"
 fi
