@@ -1,0 +1,12 @@
+{
+    "name": "azure-image-gen",
+    "version": "0.1.0",
+    "description": "OpenClaw skill scaffold to generate images using a Microsoft Foundry model.",
+    "entrypoint": "skill.handle_request",
+    "runtime": "python3.10",
+    "env": [
+        "FOUNDRY_ENDPOINT",
+        "FOUNDRY_API_KEY",
+        "FOUNDRY_DEPLOYMENT"
+    ]
+}
